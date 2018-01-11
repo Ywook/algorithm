@@ -1,0 +1,18 @@
+{
+    "git.ignoreLimitWarning": true,
+    "files.associations": {
+        "__split_buffer": "cpp",
+        "deque": "cpp",
+        "string": "cpp",
+        "vector": "cpp",
+        "algorithm": "cpp",
+        "memory": "cpp",
+        "utility": "cpp",
+        "chrono": "cpp",
+        "limits": "cpp",
+        "ostream": "cpp",
+        "ios": "cpp",
+        "iosfwd": "cpp",
+        "iterator": "cpp"
+    }
+}

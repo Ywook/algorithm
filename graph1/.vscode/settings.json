@@ -1,0 +1,13 @@
+{
+    "git.ignoreLimitWarning": true,
+    "files.associations": {
+        "__split_buffer": "cpp",
+        "deque": "cpp",
+        "string": "cpp",
+        "vector": "cpp",
+        "queue": "cpp",
+        "iostream": "cpp",
+        "ostream": "cpp",
+        "algorithm": "cpp"
+    }
+}

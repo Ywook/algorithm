@@ -1,0 +1,11 @@
+{
+    "git.ignoreLimitWarning": true,
+    "files.associations": {
+        "iostream": "cpp",
+        "11052.c": "cpp",
+        "11726.c": "cpp",
+        "11727.c": "cpp",
+        "1463.c": "cpp",
+        "ostream": "cpp"
+    }
+}
