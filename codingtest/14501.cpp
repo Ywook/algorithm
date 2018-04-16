@@ -2,22 +2,15 @@
 #include <cstdio>
 
 using namespace std;
-
-int t[17];
-int p[17];
-int dp[17];
-int ans = 0;
-int sum = 0;
-
 int n;
-
-void dfs(int index){
-    for(int i = index; i <= n;i++){
-        if(i + t[i] <= n + 1){
-            sum += p[i];
-            ans = max(sum,ans);
-            dfs(i + t[i]);
-            sum -= p[i];
+int arr[17][2];
+int ans = 0;
+void dfs(int index, int sum){
+    for(int i = index ; i <= n; i++){
+        if(i + arr[i][0] <= n+1)
+        {
+            ans = max(sum+arr[i][1], ans);
+            dfs(i + arr[i][0],sum + arr[i][1]);
         }
     }
 }
@@ -25,25 +18,15 @@ int main(){
     scanf("%d", &n);
 
     for(int i = 1; i <= n; i++){
-        scanf("%d %d", &t[i], &p[i]);
+        scanf("%d %d", &arr[i][0], &arr[i][1]);
     }
 
-    for(int i = 1; i <=n; i++){
-        if(i + t[i] <= n + 1){
-            sum += p[i];
-            ans = max(sum, ans);
-            dfs(i+t[i]);
-            sum -= p[i];
+    for(int i = 1; i <= n; i++){
+        if(i + arr[i][0] <= n+1){
+            ans = max(ans, arr[i][1]);
+            dfs(i + arr[i][0], arr[i][1]);
         }
     }
     cout<<ans<<endl;
-    //dp 방식
- /*   for(int i = n; i  > 0; i--){
-        if(dp[i] == 0) dp[i] = dp[i+1];
-        if(i + t[i] > n) continue;
-        dp[i] = dp[i+ t[i]] + p[i];
-        ans = max(dp[i], ans);
-    }
-    cout<<ans<<endl;
-    return 0;*/
+    return 0;
 }

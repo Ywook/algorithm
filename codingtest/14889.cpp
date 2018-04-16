@@ -35,11 +35,9 @@ void dfs(int index, int depth){
         return;
     }
     for(int i = index + 1; i <= n; i++){
-        if(!visit[i]){
-            visit[i] = 1;
-            dfs(i, depth+1);
-            visit[i] = 0;
-        }
+        visit[i] = 1;
+        dfs(i, depth+1);
+        visit[i] = 0;
     }
     return;
 }
