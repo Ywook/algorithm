@@ -19,10 +19,10 @@ int main(){
     int len = strlen(str);
     for(int i = 0; i < a_len; i++){
         for(int j = len - 1; j >=0; j--){
-            if(angel[i] == str[j]){
+            if(angel[i] == str[j]){ //천사 일치할 경우 다음 단계는 악마다리
                 dp[j+1][1] += dp[j][0];
             }
-            if(devil[i] == str[j]){
+            if(devil[i] == str[j]){ //악마 일치할 경우 다음 단계는 천사다리
                 dp[j+1][0] += dp[j][1];
             }
         }
