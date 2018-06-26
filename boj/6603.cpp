@@ -10,19 +10,18 @@ vector<int> v;
 int last = 0;
 void dfs(int len, int depth){
     if(depth == 0){
-        for(int i = 0; i < subset.size(); i ++){
-            printf("%d ", subset[i]);
+        for(int a : subset){
+            printf("%d ", a);
         }
         printf("\n");
         return;
     }
 
-    int next = subset.empty()? 0:last;
-
-    for(int i = next; i < len ; i++){
+    int next = subset.empty() ? 0 : last;
+    for(int i = next; i < len; i++){
         subset.push_back(v[i]);
         last = i+1;
-        dfs(len, depth -1);
+        dfs(len, depth-1);
         subset.pop_back();
     }
 }
