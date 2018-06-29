@@ -9,28 +9,7 @@ int check(int row, int col, int n){
     //상
     int i, j;
     i = row; j = col;
-    while(i+1 <= n){
-        i += 1;
-        if(map[i][j]) return 0;
-    }
-    //하
-    i = row; j = col;
-    while (i-1 > 0 && j > 0)
-    {
-        i -= 1;
-        if (map[i][j]) return 0;
-    }
-    //좌
-    i = row; j = col;
-    while(j -1 > 0){
-        j-=1;
-        if(map[i][j]) return 0;
-    }
-
-    //우
-    i = row; j = col;
-    while(j+ 1 <= n){
-        j+=1;
+    for(i = 1; i <= n; i++){
         if(map[i][j]) return 0;
     }
     //왼위 대각
