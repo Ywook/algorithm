@@ -21,7 +21,7 @@ int main(){
         scanf("%d", &b[i]);
     }
 
-
+    
     long long ans = 0;
     ans = a_sum[size] + b_sum[size];
     for(int i = 1; i < size; i++){
