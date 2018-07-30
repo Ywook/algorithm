@@ -51,5 +51,5 @@ int main(){
         printf("#%d %d\n", l, ans);
 
     }
-    return 0;
+    return
 }

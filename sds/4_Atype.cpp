@@ -17,8 +17,9 @@ int main(){
             scanf("%d %d", &s, &q);
             v.push_back(make_pair(s,q));
         }
-        
+
         printf("#%d %d", w, ans);
     }
     return 0;
 }
+
