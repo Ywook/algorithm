@@ -10,3 +10,5 @@ int main(){
     cout<<ans<<endl;
     return 0;
 }
+
+//연산자의 기호는 ＠으로, A＠B = (A+B)×(A-B)으로 정의내리기로 했다.
