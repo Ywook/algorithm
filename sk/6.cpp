@@ -1,37 +1,44 @@
 #include<stdio.h>
 
+
 void merge(int *a, int left, int mid, int right){
-    int i, j, k, m;
-
-    i = left;
+    int i,j,k, m;
+    
+    i = m = left;
     j = mid + 1;
-    k = left;
-
-    int tempArray[15];
-
-    while(i <= mid && j <= right){
+    int temp[13];
+    while(i <= mid && j <=right){
         if(a[i] > a[j]){
-            tempArray[k++] = a[j++];
+            temp[m++] = a[j];
+            j++;
         }else{
-            tempArray[k++] = a[i++];
+            temp[m++] = a[i];
+            i++;
         }
     }
 
-    while(i <= mid) tempArray[k++] = a[i++];
-    while(j <= right) tempArray[k++] = a[j++];
+    while(i <= mid){
+        temp[m++] = a[i++];
+    }
 
-    for(m = left ; m <= right; m++){
-        a[m] = tempArray[m];
+    while(j <= right){
+        temp[m++] = a[j++];
+    }
+
+    for(i = left; i <= right; i++){
+        a[i] = temp[i];
     }
 }
+
 void mergesort(int *a, int left, int right){
     int mid;
     if(left < right){
-        mid = (left+right)/2;
+        mid = (left + right)/2;
         mergesort(a, left, mid);
         mergesort(a, mid+1, right);
         merge(a, left, mid, right);
     }
+    return;
 }
 
 int find_1(int *A, int len, int k){

@@ -4,20 +4,18 @@ int main(){
     int a[11][11];
     int n, value, row, col ,alpha = 1;
     scanf("%d", &n);
-    
+    int tmp = n;
     value = n*n;
-    int temp_n = n;
-    
-    row = 0; col = -1;
-    while(temp_n > 0){
-        for(int i = 0; i < temp_n; i++){
+    row = 0;
+    col = -1;
+    while(tmp>0){
+        for(int i = 0; i < tmp; i++){
             col += alpha;
             a[row][col] = value;
             value--;
         }
-        temp_n--;
-
-        for(int j = 0; j < temp_n; j++){
+        tmp--;
+        for(int i = 0; i < tmp; i++){
             row += alpha;
             a[row][col] = value;
             value--;
