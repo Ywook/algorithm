@@ -34,7 +34,11 @@ void rot_reclock(int n){
 }
 
 void spin(int n, int dir){
+    if(n == 1){
 
+    }
+
+    
 }
 
 int main(){
