@@ -23,7 +23,7 @@ int main(){
         scanf("%lld", &arr[i]);
         max_len = max(arr[i], max_len);
     }
-
+ 
     right = max_len;
     left = 1;
 
